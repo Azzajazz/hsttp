@@ -13,3 +13,4 @@ The goals for this project are:
 ```
 stack run
 ```
+Then connect to [http://127.0.0.1] with your browser. This may not work with some browsers since the server is not currently HTTP/1.0, 1.1 or 2 compliant.
