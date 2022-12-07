@@ -1,0 +1,67 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hsttp
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/hsttp#readme>
+homepage:       https://github.com/Azzajazz/hsttp#readme
+bug-reports:    https://github.com/Azzajazz/hsttp/issues
+author:         Adam Rowland
+maintainer:     azzajazz1@gmail.com
+copyright:      2022 Adam Rowland
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/Azzajazz/hsttp
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_hsttp
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.11.3.1 && <1
+    , network >=3.1 && <4
+  default-language: Haskell2010
+
+executable hsttp-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hsttp
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.11.3.1 && <1
+    , hsttp
+    , network >=3.1 && <4
+  default-language: Haskell2010
+
+test-suite hsttp-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hsttp
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.11.3.1 && <1
+    , hsttp
+    , network >=3.1 && <4
+  default-language: Haskell2010
